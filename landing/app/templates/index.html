@@ -1,0 +1,131 @@
+<!--<html>-->
+<!--  <body>-->
+<!--    <h1>Arithmetic Microservices</h1>-->
+<!--    <form action="" method="POST">-->
+<!--      &lt;!&ndash; Hint 1: What if input "first" and "second" had default values? &ndash;&gt;-->
+<!--      Enter the First number : <input name="first" />-->
+<!--      <br />-->
+<!--      Enter the Second number: <input name="second" />-->
+<!--      <br />-->
+<!--      Enter Operation:-->
+<!--      <select id="op" name="operation">-->
+<!--        <option value="add">Addition</option>-->
+<!--        <option value="minus">Subtraction</option>-->
+<!--        <option value="multiply">Multiplication</option>-->
+<!--        <option value="divide">Division</option>-->
+<!--        <option value="lcm">LCM</option>-->
+<!--        <option value="hcf">HCF</option>-->
+<!--        <option value="modulus">Modulus</option>-->
+<!--      </select>-->
+<!--      <br /><br />-->
+<!--      <input type="submit" name="submit_button" />-->
+<!--    </form>-->
+<!--    {% for message in get_flashed_messages() %} {{message}} {% endfor %}-->
+<!--  </body>-->
+<!--</html>-->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Arithmetic Microservices</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background-color: #f2f2f2;
+        }
+
+        .container {
+            margin: 30px auto;
+            width: 50%;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        label {
+            font-weight: bold;
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        input[type="text"],
+        select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            margin-bottom: 20px;
+            font-size: 16px;
+            box-sizing: border-box;
+        }
+
+        input[type="submit"] {
+            background-color: #4CAF50;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            padding: 10px;
+            font-size: 16px;
+            cursor: pointer;
+            width: 100%;
+            margin-top: 20px;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+
+        .error-message {
+            color: #66CDAA;
+            font-weight: bold;
+            margin-bottom: 10px;
+
+
+        .submit{
+            width:70%
+
+        }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Arithmetic Microservices</h1>
+        <form action="" method="POST">
+            <label for="first">Enter the First number:</label>
+            <input type="text" id="first" name="first" />
+
+            <label for="second">Enter the Second number:</label>
+            <input type="text" id="second" name="second" />
+
+            <label for="operation">Enter Operation:</label>
+            <select id="operation" name="operation">
+                <option value="add">Addition</option>
+                <option value="minus">Subtraction</option>
+                <option value="multiply">Multiplication</option>
+                <option value="divide">Division</option>
+                <option value="lcm">LCM</option>
+                <option value="hcf">HCF</option>
+                <option value="modulus">Modulus</option>
+            </select>
+
+            <input type="submit" name="submit_button" value="Submit"  class="submit"/>
+
+            {% for message in get_flashed_messages() %}
+            <p class="error-message">{{message}}</p> {% endfor %}
+        </form>
+    </div>
+</body>
+</html>
